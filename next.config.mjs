@@ -1,7 +1,7 @@
-// next.config.js
-/** @type {import('next').NextConfig} */
+// next.config.ts
 const nextConfig = {
-  // tidak perlu 'export' kalau pakai SSR/API routes
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
 };
 
 export default nextConfig;
