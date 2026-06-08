@@ -101,40 +101,38 @@ export default function Home() {
     <Lanyard position={[0, 0, 15]} gravity={[0, -40, 0]} />
   </div>
 </section>
-<section id="about" className="min-h-screen px-6 md:px-10 py-16">
+<section id="about" className="px-6 md:px-10 py-16 overflow-x-hidden">
   <div style={{ maxWidth: 900, margin: "0 auto", background: "white" }}>
 
-    <p className="text-xs tracking-widest uppercase mb-8" style={{ color: "#1c3d39" }}>
+    <p className="text-xs tracking-widest uppercase mb-6" style={{ color: "#1c3d39" }}>
       Who I Am
     </p>
 
-    {/* Mobile: kolom, Desktop: baris */}
-    <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
+    {/* Kolom di HP, baris di desktop */}
+    <div className="flex flex-col md:flex-row gap-6 items-start">
 
       <img
         src="/assets/Lanyard/raffa.jpeg"
         alt="Raffa"
-        className="w-48 h-64 md:w-56 md:h-72 object-cover rounded-2xl shrink-0"
+        className="w-full md:w-56 md:h-72 object-cover rounded-2xl"
+        style={{ maxHeight: 320 }}
       />
 
       <div className="w-full">
-        <h2 className="text-2xl md:text-4xl font-extrabold mb-4" style={{ color: "#040506" }}>
+        <h2 className="text-2xl md:text-4xl font-extrabold mb-3" style={{ color: "#040506" }}>
           About Me
         </h2>
-        <p className="text-slate-400 leading-relaxed text-sm md:text-base mb-8">
+        <p className="text-slate-400 leading-relaxed text-sm md:text-base mb-6">
           Hi! I'm <span className="font-semibold" style={{ color: "#05101a" }}>Raffa Rahma Tahlil Pratama</span>,
           a passionate <span className="font-semibold" style={{ color: "#05101a" }}>Full Stack Developer based in Indonesia.</span> I enjoy building modern, responsive, and user-friendly web
           applications while continuously improving my skills in both
           <span className="font-semibold" style={{ color: "#05101a" }}> frontend and backend development.</span>
         </p>
 
-        {/* Mobile: kolom, Desktop: baris */}
-        <div className="flex flex-col md:flex-row gap-4 md:gap-8">
+        <div className="flex flex-row gap-6 flex-wrap">
           <div>
             <p className="text-slate-500 text-xs">Email</p>
-            <p className="text-xs md:text-sm break-all" style={{ color: "#07111c" }}>
-              Raffapratama123221@gmail.com
-            </p>
+            <p className="text-xs md:text-sm" style={{ color: "#07111c" }}>Raffapratama123221@gmail.com</p>
           </div>
           <div>
             <p className="text-slate-500 text-xs">Phone</p>
