@@ -25,12 +25,14 @@ export default function Home() {
 
       <Navbar/>
 
- <section className="min-h-screen flex flex-col md:flex-row items-center justify-between px-6 md:px-24 py-16 md:py-24 gap-10" style={{ color: "#F8FAFC", background: "#0F172A" }}>
-  
-  <div className="flex flex-col">
+ <section
+  className="min-h-screen flex flex-col md:flex-row items-center justify-between px-8 md:px-24 pt-24 pb-16 md:py-24 gap-10"
+  style={{ color: "#F8FAFC", background: "#0F172A" }}
+>
+  <div className="flex flex-col w-full">
     <SplitText
       text="Portofolio"
-      className="text-5xl font-bold"
+      className="text-4xl md:text-5xl font-bold"
       delay={50}
       duration={1.25}
       ease="power3.out"
@@ -42,7 +44,7 @@ export default function Home() {
       textAlign="left"
     />
 
-    <div className="mt-1" style={{ fontSize: "1rem", display: "flex" }}>
+    <div className="mt-1" style={{ fontSize: "0.95rem", display: "flex" }}>
       <TextType
         text={["My Name Is ", "RAFFA RAHMA TAHLIL PRATAMA"]}
         typingSpeed={75}
@@ -54,13 +56,13 @@ export default function Home() {
       />
     </div>
 
-    <div className="flex gap-8 mt-2 items-start">
-
+    {/* Stats row — flex-wrap biar tidak overflow di HP */}
+    <div className="flex flex-wrap gap-6 mt-3 items-start">
       <div>
         <h1>
-          <span style={{ color: "cyan", fontSize: "3.5rem" }} className="font-bold">5+</span>
+          <span style={{ color: "cyan", fontSize: "2.5rem" }} className="font-bold">5+</span>
           <br />
-          <span style={{ fontSize: "0.75rem", color: "#94A3B8", letterSpacing: "0.1em" }}>LANGUAGE</span>
+          <span style={{ fontSize: "0.65rem", color: "#94A3B8", letterSpacing: "0.1em" }}>LANGUAGE</span>
         </h1>
         <div className="flex flex-wrap gap-1 mt-1">
           {['JavaScript', 'TypeScript', 'PHP', 'Python', 'SQL'].map((lang, i) => (
@@ -71,25 +73,24 @@ export default function Home() {
         </div>
       </div>
 
-      <div style={{ borderLeft: '1px solid rgba(255,255,255,0.1)', paddingLeft: '2rem' }}>
+      <div style={{ borderLeft: '1px solid rgba(255,255,255,0.1)', paddingLeft: '1.5rem' }}>
         <h1>
-          <span style={{ color: "cyan", fontSize: "3.5rem" }} className="font-bold">3+</span>
+          <span style={{ color: "cyan", fontSize: "2.5rem" }} className="font-bold">3+</span>
           <br />
-          <span style={{ fontSize: "0.75rem", color: "#94A3B8", letterSpacing: "0.1em" }}>PROJECTS</span>
+          <span style={{ fontSize: "0.65rem", color: "#94A3B8", letterSpacing: "0.1em" }}>PROJECTS</span>
         </h1>
       </div>
 
-      <div style={{ borderLeft: '1px solid rgba(255,255,255,0.1)', paddingLeft: '2rem' }}>
+      <div style={{ borderLeft: '1px solid rgba(255,255,255,0.1)', paddingLeft: '1.5rem' }}>
         <h1>
-          <span style={{ color: "cyan", fontSize: "3.5rem" }} className="font-bold">1+</span>
+          <span style={{ color: "cyan", fontSize: "2.5rem" }} className="font-bold">1+</span>
           <br />
-          <span style={{ fontSize: "0.75rem", color: "#94A3B8", letterSpacing: "0.1em" }}>YEAR EXP</span>
+          <span style={{ fontSize: "0.65rem", color: "#94A3B8", letterSpacing: "0.1em" }}>YEAR EXP</span>
         </h1>
       </div>
-
     </div>
 
-    <div style={{ color: "#94A3B8", lineHeight: 1.8, fontSize: "1rem", maxWidth: 500, marginBottom: "2rem", marginTop: "1rem" }}>
+    <div style={{ color: "#94A3B8", lineHeight: 1.8, fontSize: "0.95rem", maxWidth: 500, marginBottom: "2rem", marginTop: "1rem" }}>
       Passionate about building modern web experiences
       and <span className="font-semibold" style={{ color: "#d8e1e9" }}>driven by continuous learning
       and innovation in software development.</span>
@@ -99,11 +100,9 @@ export default function Home() {
   <div className="hidden md:block w-full md:w-1/2 h-64 md:h-screen">
     <Lanyard position={[0, 0, 15]} gravity={[0, -40, 0]} />
   </div>
-
 </section>
-
 <section id="about" className="min-h-screen px-6 md:px-10 py-16 overflow-x-auto">
-  <div style={{ minWidth: 600, maxWidth: 900, margin: "0 auto" }}>
+  <div style={{ minWidth: 600, maxWidth: 900, margin: "0 auto", background:"white"}}>
     
     <p className="text-xs tracking-widest uppercase mb-8" style={{color:"#1c3d39"}}>
       Who I Am

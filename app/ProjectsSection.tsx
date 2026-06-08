@@ -78,7 +78,7 @@ export default function Page() {
             </div>
           ))}
         </div>
-
+          
         <style>{`#projects .overflow-x-auto::-webkit-scrollbar { display: none; }`}</style>
       </section>
     </main>
